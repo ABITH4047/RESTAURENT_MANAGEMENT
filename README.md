@@ -1,28 +1,53 @@
-Project Description
+# 🍽️ Restaurant Management System (MySQL)
 
-Project Title: Restaurant Management System (MySQL)
+This project is a *Restaurant Management Database System* built using *MySQL*.  
+It efficiently manages restaurant operations such as reservations, orders, and menu items.
 
-Description:
-This project is a Restaurant Management System built using MySQL. It helps manage various restaurant operations such as reservations, menu items, orders, and customer details. The project demonstrates the use of SQL concepts like joins, views, subqueries, triggers, and stored procedures to handle data efficiently.
+---
 
-Key Features:
-* Manage menu items, customers, tables, and reservations.
-* Automatically update table availability after reservations using triggers.
-* View detailed reservation information using SQL Views.
-* Fetch customer order statistics using stored procedures.
-* Retrieve customers who spent above average using subqueries.
+## 📊 Project Overview
 
-Technologies Used:
+The system includes the following database functionalities:
 
-Database: MySQL
-Tools: MySQL Workbench / XAMPP / phpMyAdmin
-Language: SQL
+- Manage *Menu Items, **Tables, **Customers, **Reservations, and **Orders*.
+- Use *joins* to fetch combined information from multiple tables.
+- Create *views* for reservation summaries.
+- Use *subqueries* to find customers with spending above the average.
+- Implement a *trigger* to automatically update table availability after a reservation.
+- Use a *stored procedure* to count customer orders.
 
-SQL Concepts Implemented:
+---
 
-Joins
-Views
-Subqueries
-Triggers
-Stored Procedures
-Data Insertion and Retrieval
+## 🗂️ Database Schema
+
+*Tables Created:*
+1. MenuItems
+2. Tables
+3. Customers
+4. Reservations
+5. Orders
+6. OrderDetails
+
+Each table is related through *Primary Keys* and *Foreign Keys* ensuring referential integrity.
+
+---
+
+## ⚙️ SQL Features Used
+
+| Feature | Description |
+|----------|-------------|
+| *JOIN* | Combines data from Orders and Customers |
+| *VIEW* | Displays combined reservation details |
+| *SUBQUERY* | Finds customers who spent more than the average |
+| *TRIGGER* | Automatically updates table availability after reservation |
+| *STORED PROCEDURE* | Counts total orders per customer |
+
+---
+
+## 🧠 Example Queries
+
+### 🔹 Join Example
+```sql
+SELECT O.OrderID, C.CustomerName, O.TotalAmount, O.OrderDate
+FROM Orders O
+JOIN Customers C ON O.CustomerID = C.CustomerID;

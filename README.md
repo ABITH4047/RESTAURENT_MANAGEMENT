@@ -1,11 +1,11 @@
-# 🍽️ Restaurant Management System (MySQL)
+# Restaurant Management System (MySQL)
 
 This project is a *Restaurant Management Database System* built using *MySQL*.  
 It efficiently manages restaurant operations such as reservations, orders, and menu items.
 
 ---
 
-## 📊 Project Overview
+##  Project Overview
 
 The system includes the following database functionalities:
 
@@ -18,7 +18,7 @@ The system includes the following database functionalities:
 
 ---
 
-## 🗂️ Database Schema
+##  Database Schema
 
 *Tables Created:*
 1. MenuItems
@@ -32,7 +32,7 @@ Each table is related through *Primary Keys* and *Foreign Keys* ensuring referen
 
 ---
 
-## ⚙️ SQL Features Used
+##  SQL Features Used
 
 | Feature | Description |
 |----------|-------------|
@@ -42,12 +42,5 @@ Each table is related through *Primary Keys* and *Foreign Keys* ensuring referen
 | *TRIGGER* | Automatically updates table availability after reservation |
 | *STORED PROCEDURE* | Counts total orders per customer |
 
----
-
-## 🧠 Example Queries
-
-### 🔹 Join Example
-```sql
-SELECT O.OrderID, C.CustomerName, O.TotalAmount, O.OrderDate
 FROM Orders O
 JOIN Customers C ON O.CustomerID = C.CustomerID;

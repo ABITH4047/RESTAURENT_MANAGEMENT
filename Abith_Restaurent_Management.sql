@@ -55,6 +55,8 @@ CREATE TABLE OrderDetails (
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
 );
 
+   Show tables;
+
 -- Insert value into each tables
 INSERT INTO MenuItems (ITEMNAME,CATEGORY,PRICE) VALUES
 ('Margherita Pizza', 'Main Course', 299.00),
